@@ -1,0 +1,14 @@
+from collections import namedtuple
+n=int(input().strip())
+xyz=[]
+a=input().strip().split()
+clas=namedtuple("clas",a)
+
+for i in range(n):
+    b=input().strip().split()
+    xyz.append(clas(b[0],b[1],b[2],b[3]))
+marks=0    
+for i in xyz:
+    marks=int(i.MARKS)+marks
+    
+print("{:.2f}".format(marks/n))
